@@ -34,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mSnackbar = Snackbar.make(view, "Пора кормить кота", Snackbar.LENGTH_LONG);
                 mSnackbar.setAction("Да", snackbarOnClickListener).setActionTextColor(Color.GREEN);
-                View snackbarView = mSnackbar.getView();
-                snackbarView.setBackgroundColor(Color.BLUE);
-                TextView snackTextView = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
-                snackTextView.setTextColor(Color.RED);
+//                View snackbarView = mSnackbar.getView();
+//                snackbarView.setBackgroundColor(Color.BLUE);
+//                TextView snackTextView = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+//                snackTextView.setTextColor(Color.RED);
+                SnackbarHelper.configSnackbar(MainActivity.this, mSnackbar);
                 mSnackbar.show();
                 mSnackbar.addCallback(
                         new Snackbar.Callback(){
